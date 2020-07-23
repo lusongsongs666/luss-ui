@@ -1,14 +1,14 @@
-# lu-ui
+# luui
 
 ## 安装组件库
 ```
-npm install lu-ui
+npm install luui
 ```
 
 ### 全局导入
 ```
-import LuUI from 'lu-ui'
-import 'lu-ui/lu-ui.css'
+import LuUI from 'luui'
+import 'luui/lib/luui.css'
 ```
 
 ### 全局使用
