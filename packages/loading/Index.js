@@ -8,7 +8,7 @@ import LoadingComponent from './Loading'
 
 const loadingComponent = Vue.extend(LoadingComponent);
 
-let showLoading = (showWrapper=true) => {
+let showLoading = () => {
   const loadingDom = new loadingComponent({
     el: document.createElement('div')
   });

@@ -75,6 +75,11 @@
           <h3>Loading</h3>
           <lu-button type="primary" @click="showLoading()">show</lu-button>
         </div>
+
+        <div class="col">
+          <h3>Switch</h3>
+          <lu-switch v-model="active" activeColor="" inactiveColor=""></lu-switch>
+        </div>
       </div>
     </div>
   </div>
@@ -85,7 +90,8 @@ export default {
   name: 'App',
   data(){
     return {
-      visible: false
+      visible: false,
+      active: false
     }
   },
   methods: {

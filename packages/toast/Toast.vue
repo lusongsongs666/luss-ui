@@ -1,6 +1,6 @@
 <template>
     <transition name="toast">
-        <div class="toast" v-if="show">
+        <div class="lu-toast" v-if="show">
             {{ text }}
         </div>
     </transition>
@@ -13,7 +13,7 @@
 </script>
 
 <style scoped>
-    .toast{
+    .lu-toast{
         position: fixed;
         top: 50%;
         left: 50%;

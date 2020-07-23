@@ -1,6 +1,7 @@
 //包入口
 import Button from './button/LuButton'
 import Dialog from './dialog/LuDialog'
+import Switch from './switch/LuSwitch'
 import MsgBox from './messageBox/Index'
 import Toast from './toast/Index'
 import Loading from './loading/Index'
@@ -14,7 +15,8 @@ const methodComponents = [
 
 const elementComponents = [
   Button,
-  Dialog
+  Dialog,
+  Switch
 ];
 
 const install = function (Vue) {
