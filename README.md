@@ -1,19 +1,17 @@
 # lu-ui
 
-## Project setup
+## 安装组件库
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install lu-ui
 ```
 
-### Compiles and minifies for production
+### 全局导入
 ```
-npm run build
+import LuUI from 'lu-ui'
+import 'lu-ui/lu-ui.css'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 全局使用
+```
+Vue.use(LuUI)
+```
