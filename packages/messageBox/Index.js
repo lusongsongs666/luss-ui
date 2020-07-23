@@ -57,8 +57,8 @@ const showMsgBox = (header='', content='', options={}) => {
   })
 };
 
-const registerMsgBox = ()=>{
-  Vue.prototype.$msg = showMsgBox
+const registerMsgBox = (vue) => {
+  vue.prototype.$msg = showMsgBox
 };
 
 export default registerMsgBox

@@ -3,11 +3,13 @@ import Button from './button/LuButton'
 import Dialog from './dialog/LuDialog'
 import MsgBox from './messageBox/Index'
 import Toast from './toast/Index'
+import Loading from './loading/Index'
 import './iconfont/iconfont.css'
 
 const methodComponents = [
   MsgBox,
-  Toast
+  Toast,
+  Loading
 ];
 
 const elementComponents = [
@@ -18,7 +20,7 @@ const elementComponents = [
 const install = function (Vue) {
   //分类注册不同形式的组件
   methodComponents.forEach(item=>{
-    Vue.use(item)
+    item(Vue)
   });
 
   elementComponents.forEach(item=>{

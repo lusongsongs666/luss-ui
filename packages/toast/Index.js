@@ -1,3 +1,8 @@
+/**
+ * @author : songsong.lu
+ * @date : 2020/03/24
+ * @description : 重写toast样式
+ **/
 import Vue from 'vue';
 import toastComponent from './Toast'
 
@@ -23,8 +28,8 @@ let showToast = (text, duration=2000)=>{
     },duration)
 };
 
-let registryToast = ()=>{
-  Vue.prototype.$toast = showToast
+let registryToast = (vue) => {
+  vue.prototype.$toast = showToast
 };
 
 export default registryToast

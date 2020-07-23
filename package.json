@@ -1,6 +1,6 @@
 {
   "name": "luss-ui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "main": "dist/luss-ui.umd.min.js",
   "author": {
@@ -18,14 +18,13 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
-    "luss-ui": "^1.0.1",
+    "luss-ui": "^1.0.2",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
-    "not dead"
+    "last 2 versions"
   ]
 }

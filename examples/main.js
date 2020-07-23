@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-/*import '../examples/assets/style/basic.scss'
-import LuUI from '../packages'*/
-import 'luss-ui/dist/luss-ui.css'
-import LuUI from 'luss-ui'
+import './basic.scss'
 
-Vue.use(LuUI);
+import LussUI from '../packages'
+
+/*import 'luss-ui/dist/luss-ui.css'
+import LussUI from 'luss-ui'*/
+
+Vue.use(LussUI);
 
 Vue.config.productionTip = false;
 

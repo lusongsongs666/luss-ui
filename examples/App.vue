@@ -62,11 +62,18 @@
               <h3>我是标题党</h3>
             </template>
 
+            <div>This is body</div>
+
             <template v-slot:footer>
               <lu-button @click="visible = false">取消</lu-button>
               <lu-button type="primary" @click="visible = false">确定</lu-button>
             </template>
           </lu-dialog>
+        </div>
+
+        <div class="col">
+          <h3>Loading</h3>
+          <lu-button type="primary" @click="showLoading()">show</lu-button>
         </div>
       </div>
     </div>
@@ -74,15 +81,8 @@
 </template>
 
 <script>
-
-import LuDialog from "../packages/dialog/LuDialog";
-import LuButton from "../packages/button/LuButton";
 export default {
   name: 'App',
-  components: {
-    LuButton,
-    LuDialog
-  },
   data(){
     return {
       visible: false
@@ -106,6 +106,12 @@ export default {
     },
     showDialog(){
       this.visible = true
+    },
+    showLoading(){
+      this.$loading.show();
+      setTimeout(()=>{
+        this.$loading.hide()
+      },3000)
     },
   }
 }
