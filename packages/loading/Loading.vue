@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="lu-loading_wrapper"></div>
+    <div class="lu-loading_wrapper"
+         :style="{
+          backgroundColor: showWrapper ? '#969896' : 'transparent',
+          opacity: showWrapper ? '0.3' : '0'
+         }"
+    ></div>
     <div class="lu-loading">
       <div class="lu-loading_spinner">
         <div class="dot"></div>
@@ -23,7 +28,6 @@
     bottom: 0;
     right: 0;
     top: 0;
-    background-color: transparent;
     /*pointer-events:none;*/
     z-index: 3001;
   }
@@ -34,7 +38,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3001;
+    z-index: 3002;
     &_spinner{
       position: absolute;
       top: 50%;

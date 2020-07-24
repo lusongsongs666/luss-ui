@@ -80,6 +80,11 @@
           <h3>Switch</h3>
           <lu-switch v-model="active" activeColor="" inactiveColor=""></lu-switch>
         </div>
+
+        <div class="col">
+          <h3>Clock</h3>
+          <lu-clock type="countDown" :timestamp="112331231231212"></lu-clock>
+        </div>
       </div>
     </div>
   </div>
@@ -114,7 +119,11 @@ export default {
       this.visible = true
     },
     showLoading(){
-      this.$loading.show();
+      this.$loading.show(
+        {
+          showWrapper: true
+        }
+      );
       setTimeout(()=>{
         this.$loading.hide()
       },3000)

@@ -1,3 +1,8 @@
+<!--
+* @author : songsong.lu
+* @date : 2020/04/06
+* @description : 重写开关组件,提供修改激活和非激活状态颜色的入口
+-->
 <template>
   <label class="lu-switch" @click="handlerClick" :class="{'is-checked': value}">
     <span class="lu-switch_core" :style="{ borderColor: switchColor, backgroundColor: switchColor }">

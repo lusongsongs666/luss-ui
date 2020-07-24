@@ -1,7 +1,7 @@
 <!--
 * @author : songsong.lu
 * @date : 2020/04/06
-* @description : 重写按钮组件，扩展功能
+* @description : 重写按钮组件样式，提供type,plain,round,circle,disabled的样式选择
 -->
 <template>
     <button :class="['lu-button',`lu-button-${type}`,{

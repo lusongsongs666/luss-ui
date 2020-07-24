@@ -9,18 +9,35 @@ import LoadingComponent from './Loading'
 const loadingComponent = Vue.extend(LoadingComponent);
 
 let showLoading = () => {
+  const defaultOptions = {
+    showWrapper: false
+  };
   const loadingDom = new loadingComponent({
-    el: document.createElement('div')
+    el: document.createElement('div'),
+    data(){
+      return {
+        show: false,
+        showWrapper: defaultOptions.showWrapper
+      }
+    }
   });
   let methods = {
-    show: () => {
+    show: (options) => {
+      if(options){
+        options = Object.assign(defaultOptions,options);
+        loadingDom.showWrapper = options.showWrapper;
+      }
       const loading = document.querySelector('.lu-loading');
       if(!loading){
         document.body.appendChild(loadingDom.$el);
+        setTimeout(()=>{ loadingDom.show = true });
       }
     },
     hide: () => {
-      document.body.removeChild(loadingDom.$el);
+      loadingDom.show = false;
+      setTimeout(()=>{
+        document.body.removeChild(loadingDom.$el)
+      },500)
     }
   };
   return methods

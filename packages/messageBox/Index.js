@@ -10,14 +10,14 @@ const msgBoxComponent = Vue.extend(MsgBoxComponent);
 
 const showMsgBox = (header='', content='', options={}) => {
   return new Promise((resolve, reject) => {
-    let basicOptions = {
+    let defaultOptions = {
       type: 'warning',
       confirmText: '确定',
       cancelText: '取消',
       defaultValue: '',
       placeholder: ''
     };
-    options = Object.assign(basicOptions,options);
+    options = Object.assign(defaultOptions,options);
     const msgDom = new msgBoxComponent({
       el: document.createElement('div'),
       data(){

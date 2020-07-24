@@ -2,21 +2,25 @@
 import Button from './button/LuButton'
 import Dialog from './dialog/LuDialog'
 import Switch from './switch/LuSwitch'
+import Clock from './clock/LuClock'
+
 import MsgBox from './messageBox/Index'
 import Toast from './toast/Index'
 import Loading from './loading/Index'
+
 import './iconfont/iconfont.css'
+
+const elementComponents = [
+  Button,
+  Dialog,
+  Switch,
+  Clock
+];
 
 const methodComponents = [
   MsgBox,
   Toast,
   Loading
-];
-
-const elementComponents = [
-  Button,
-  Dialog,
-  Switch
 ];
 
 const install = function (Vue) {
