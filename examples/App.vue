@@ -85,6 +85,12 @@
           <h3>Clock</h3>
           <lu-clock type="countDown" :timestamp="112331231231212"></lu-clock>
         </div>
+
+        <div class="col">
+          <h3>PopBox</h3>
+          <lu-button type="primary" @click="showPopBox()">show</lu-button>
+          <pop-box :visible.sync="popVisivle"></pop-box>
+        </div>
       </div>
     </div>
   </div>
@@ -96,7 +102,8 @@ export default {
   data(){
     return {
       visible: false,
-      active: false
+      active: false,
+      popVisivle: false
     }
   },
   methods: {
@@ -127,6 +134,9 @@ export default {
       setTimeout(()=>{
         this.$loading.hide()
       },3000)
+    },
+    showPopBox(){
+      this.popVisivle = true
     },
   }
 }

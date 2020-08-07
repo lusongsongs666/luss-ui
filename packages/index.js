@@ -3,6 +3,7 @@ import Button from './button/LuButton'
 import Dialog from './dialog/LuDialog'
 import Switch from './switch/LuSwitch'
 import Clock from './clock/LuClock'
+import PopBox from './popBox/PopBox'
 
 import MsgBox from './messageBox/Index'
 import Toast from './toast/Index'
@@ -14,7 +15,8 @@ const elementComponents = [
   Button,
   Dialog,
   Switch,
-  Clock
+  Clock,
+  PopBox
 ];
 
 const methodComponents = [

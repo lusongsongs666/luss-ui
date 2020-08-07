@@ -1,6 +1,6 @@
 <template>
     <transition name="toast">
-        <div class="lu-toast" v-if="show">
+        <div class="lu-toast" v-if="show" :class="['lu-toast', `lu-toast-${mode}`]">
             {{ text }}
         </div>
     </transition>
@@ -21,12 +21,21 @@
         padding: 10px 15px;
         max-width: 70vw;
         font-size: 16px;
-        color: #fff;
-        background-color: #040B29;
+
         border-radius: 4px;
         z-index: 2000;
     }
+    .lu-toast-dark{
+        color: #fff;
+        background-color: #040B29;
+    }
+    .lu-toast-light{
+        color: #040B29;
+        background-color: #fff;
+    }
 
+
+    /**动画效果**/
     .toast-enter,
     .toast-leave-to{
         opacity: 0;
